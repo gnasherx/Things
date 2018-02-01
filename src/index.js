@@ -1,15 +1,21 @@
 import express from "express";
 
 const app = express();
+import constants from "./configuration/constants";
+import "./configuration/database";
+import middlewaresConfig from "./configuration/middlewares";
+import { TodoRoutes } from "./models";
 
-const PORT = process.env.PORT || 3000;
+middlewaresConfig(app);
 
-app.listen(PORT, err => {
+app.use("/api", TodoRoutes);
+
+app.listen(constants.PORT, err => {
   if (err) {
     throw err;
   } else {
     console.log(`
-            Server running on port: ${PORT}
+            Server running on port: ${constants.PORT}
             ---
             Running on ${process.env.NODE_ENV}
         `);
