@@ -1,0 +1,24 @@
+{
+  "name": "Things_backend",
+  "version": "1.0.0",
+  "description": "This is things api.",
+  "main": "index.js",
+  "repository": "https://github.com/gnasherx/Things_backend.git",
+  "author": "gnasherx",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "cross-env": "^5.1.3",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.14.11",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
