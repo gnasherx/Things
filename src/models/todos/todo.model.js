@@ -18,7 +18,8 @@ const TodoSchema = new Schema(
     },
 
     status: {
-      type: boolean
+      type: Boolean,
+      default: false
     }
   },
   {

@@ -18,15 +18,15 @@ export const createTodo = async (req, res) => {
 };
 
 // GET ALL TODO
-export const getAllTodos = async (req, res) {
-    try {
-        return res.status(200).json({
-            todos: await Todo.find({})
-        })
-    } catch (error) {
-        return res.status(error.status).json({
-            error: true,
-            message: 'Error while getting your all Todos!'
-        })
-    }
-}
+export const getAllTodos = async (req, res) => {
+  try {
+    return res.status(200).json({
+      todos: await Todo.find({})
+    });
+  } catch (error) {
+    return res.status(error.status).json({
+      error: true,
+      message: "Error while getting your all Todos!"
+    });
+  }
+};

@@ -1,13 +1,13 @@
 const devConfig = {
-  MONGO_URL: "mongodb://192.168.0.3/things-dev"
+  MONGO_URL: "mongodb://localhost/things-dev"
 };
 
 const testConfig = {
-  MONGO_URL: "mongodb://192.168.0.3/things-test"
+  MONGO_URL: "mongodb://localhost/things-test"
 };
 
 const prodConfig = {
-  MONGO_URL: "mongodb://192.168.0.3/things-prod"
+  MONGO_URL: "mongodb://localhost/things-prod"
 };
 
 const defaultConfig = {
