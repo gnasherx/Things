@@ -13,9 +13,9 @@ const TodoSchema = new Schema(
       required: [true, "You must give some description about todo!"]
     },
 
-    tag: {
-      type: String
-    },
+    // tag: {
+    //   type: String
+    // },
 
     status: {
       type: Boolean,
