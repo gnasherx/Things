@@ -4,11 +4,11 @@ const app = express();
 import constants from "./configuration/constants";
 import "./configuration/database";
 import middlewaresConfig from "./configuration/middlewares";
-import { TodoRoutes } from "./models";
+import { TodoRoutes, SectionRoutes } from "./models";
 
 middlewaresConfig(app);
 
-app.use("/api", TodoRoutes);
+app.use("/api", [TodoRoutes, SectionRoutes]);
 
 app.listen(constants.PORT, err => {
   if (err) {

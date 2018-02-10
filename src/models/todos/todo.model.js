@@ -4,7 +4,6 @@ const TodoSchema = new Schema(
   {
     title: {
       type: String,
-      unique: true,
       required: [true, "You must give a todo title!"]
     },
 
@@ -20,6 +19,10 @@ const TodoSchema = new Schema(
     status: {
       type: Boolean,
       default: false
+    },
+    section: {
+      type: Schema.Types.ObjectId,
+      ref: "Section"
     }
   },
   {
