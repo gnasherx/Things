@@ -32,6 +32,20 @@ export const createSection = async (req, res) => {
   }
 };
 
+export const getAllSections = async (req, res) => {
+  try {
+    return res.status(200).json({
+      error: false,
+      sections: await Section.find({})
+    });
+  } catch (error) {
+    return res.status(400).json({
+      error: true,
+      message: `Error while getting your all sections: ${error}`
+    });
+  }
+};
+
 export const createSectionTodo = async (req, res) => {
   const { title, description } = req.body;
   const { sectionId } = req.params;
